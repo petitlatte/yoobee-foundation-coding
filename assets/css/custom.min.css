@@ -8,8 +8,9 @@
 /*********************************************
  * RESET STYLES
  *********************************************/
-html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
+@import url(simple.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+html, body, .reveal div, .reveal span, .reveal applet, .reveal object,
 .reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
 .reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
 .reveal small, .reveal strike, .reveal strong, .reveal sub, .reveal sup, .reveal tt, .reveal var,
@@ -1191,7 +1192,6 @@ body {
   overflow: auto;
   box-sizing: border-box;
   text-align: left;
-  font-family: Helvetica, sans-serif;
   -webkit-overflow-scrolling: touch; }
 
 .reveal .speaker-notes.visible:not(:empty) {
@@ -1224,5 +1224,14 @@ body {
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
+*, html, body {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6, p {
+  text-align: left; }
+
 h1 {
-  font-size: 4em; }
+  font-size: 2.6em;
+  margin-bottom: 0.8em;
+  padding-left: 1em; }
