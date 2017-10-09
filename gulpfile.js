@@ -22,10 +22,10 @@ var config = {
 		html: '*.html',
 		js: 'assets/js/custom.js',
     	sass:[
-      		'sass/*.scss',
+      		'assets/sass/*.scss',
     	],
-    	ejs: 'views/head-office.ejs',
-    	css: ['css/*.css']
+    	ejs: 'assets/views/index.ejs',
+    	css: ['assets/css/*.css']
 	}
 }
 
@@ -65,11 +65,11 @@ gulp.task('images', function () {
 });
 
 gulp.task('sass', function(){
-	gulp.src('sass/custom.scss')
+	gulp.src('assets/sass/custom.scss')
     	.pipe(sass().on('error', sass.logError))
 		.pipe(concat('custom.css'))
 		.pipe(rename({suffix: '.min'}))
-    	.pipe(gulp.dest('./css'))
+    	.pipe(gulp.dest('assets/css'))
 		.pipe(connect.reload());
 });
 
@@ -82,8 +82,9 @@ gulp.task('jsLint', function () {
 gulp.task('ejs', function(){
    gulp.src(config.paths.ejs)
    .pipe(gEjs())
-   .pipe(rename('head-office.html'))
-   .pipe(gulp.dest('./'));
+   .pipe(rename('index.html'))
+   .pipe(gulp.dest('./'))
+   .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
