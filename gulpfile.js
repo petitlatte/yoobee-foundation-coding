@@ -54,7 +54,7 @@ gulp.task('js', function() {
 		.bundle()
 		.on('error', console.error.bind(console))
 		.pipe(source('bundle.js'))
-		.pipe(gulp.dest('./js'))
+		.pipe(gulp.dest('assets/js'))
 		.pipe(connect.reload());
 });
 
