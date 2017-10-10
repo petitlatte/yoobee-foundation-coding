@@ -82,7 +82,7 @@ gulp.task('jsLint', function () {
 gulp.task('ejs', function(){
    gulp.src(config.paths.ejs)
    .pipe(gEjs())
-   .pipe(rename('index.html'))
+   .pipe(rename('index-theory-01.html'))
    .pipe(gulp.dest('./'))
    .pipe(connect.reload());
 });
