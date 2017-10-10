@@ -8,7 +8,6 @@
 /*********************************************
  * RESET STYLES
  *********************************************/
-@import url(simple.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 html, body, .reveal div, .reveal span, .reveal applet, .reveal object,
 .reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
@@ -1229,6 +1228,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   display: inline-block;
+  text-align: left;
   font-size: 2.6em;
   margin-bottom: 1em;
   border-bottom: 1px solid #2EA664;

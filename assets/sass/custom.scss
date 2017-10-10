@@ -1,7 +1,6 @@
 //All Custom sass
 
 @import '_reveal.scss';
-@import 'simple.css';
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 *, html, body {
@@ -15,6 +14,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
 	display: inline-block;
+	text-align: left;
 	font-size: 2.6em;
 	margin-bottom: 1em;
 	border-bottom: 1px solid #2EA664;
