@@ -18,29 +18,42 @@
 
 								<section>
 									<h1>Command Line Interface/Interpreter Tips</h1>
-									<p>- ls</p>
-									<p>- cd</p> 
-									<p>- touch</p> 
-									<p>- mkdir</p>
-									<p>- folder structure</p>
+									<p>- ls <i>list dir</i></p>
+									<p>- cd <i>move into dir</i></p> 
+									<p>- cd .. <i>move up a dir</i></p>
+									<p>- touch <i>make a file</i></p> 
+									<p>- mkdir <i>make a folder</i></p>
 								</section>
 
 								<section>
-									<h1>Command Line and Git</h1>
-									<p>Making a repo on git</p>
-									<p>Git commands from the initial push</p>
-									<p>touch .gitignore</p>
-									<p>- git init</p>
-									<p>- git add -A</p>
-									<p>- git commit -m "Initial commit"</p>
-									<p>- git remote add origin youruser@yourserver.com:/path/to/my_project.git</p>
-									<p>- git push origin master</p>
-									<p>--------</p>
-									<p>Using gtihub pages</p>
-									<p>3 key commands for pushing to git from the cli</p>
-									<p>- git add -A</p>
-									<p>- git commit -am"message here"</p>
-									<p>- git push</p>
+									<div class="row">
+										<h1>Command Line and Git</h1>
+										<h2>Making a repo on git</h2>
+										<div class="col-md-6">
+
+											<h4>Git commands from the initial push - <i>Brand NEW project</i></h4>
+											<p>- create a new repo via the git web site</p>
+											<p>- git init</p>
+											<p>- git add -A</p>
+											<p>- git commit -m "Initial commit"</p>
+											<p>- git remote add origin youruser@yourserver.com:/path/to/my_project.git</p>
+											<p>- git push -u origin master</p>
+											<hr>
+											<h4>Pushing an existing project to a NEW repo - <i>New repo created for old local project</i></h4>
+											<p>- create a new repo via the git web site</p>
+											<p>- git add -A</p>										
+										</div>
+										<div class="col-md-6">
+											<p>- git commit -am"message here"</p>
+											<p>- git remote add origin https://github.com/details-fromgit-go-here</p>
+											<p>- git push -u origin master</p>
+											<h4>Using github pages for regular updates for your connected project:</h4>
+											<p><i>3 repeatable key commands for pushing to git from the cli</i></p>
+											<p>- git add -A</p>
+											<p>- git commit -am"message here"</p>
+											<p>- git push</p>
+										</div>
+									</div>
 								</section>
 
 								<section>
