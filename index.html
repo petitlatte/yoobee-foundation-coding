@@ -17,68 +17,95 @@
 							<div class="slides">
 
 								<section>
-									<h1>Snippets and Npm</h1>
-									<h4>Snippets</h4>
-									<p>boot.sublime-snippet</p>
-									<h4>NPM</h4>
-									<p><a href="https://docs.npmjs.com/getting-started/what-is-npm">npm Package manager</a></p>
-									<h4>Git Clone / Git Pull</h4>
-									<p>Confirm understanding of "git clone" and "git pull"</p>
-									<h4>Checkpoint</h4>
-									<p>Create 3 useful sublime snippets:</p>
-									<p>- css npm or cdn link</p>
-									<p>- js npm or cdn link</p>
-									<p>- console.log</p>
-									<hr>
-									<p>Git clone and pull practice</p>
+									<h1>JS Fundamentals</h1>
+									<h2>Statements</h2>
+									<img src="assets/images/js-statements.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-								<h1>jQuery Continued</h1>
-								<img src="assets/images/jq-a.jpg" alt="">
-
+								<h1>JS data/value types</h1>
+								<a href="https://www.w3schools.com/js/js_datatypes.asp"><p>Types of data/values in javascript</p></a>
+								<h2>Use a variable to interact with the DOM</h2>
+								<p>See Duckett numeric-variable</p>
+								<h2>Strings and being careful with quotes</h2>
+								<p>Remember to choose "" or '' and stick with one or the other. Consistency is key when coding. </p>
+								<h2>Variable values can easily be changed throughout the script or code</h2>
 								</section>
 
 								<section>
-								<h1>jQuery Continued</h1>
-								<h3>" jQuery doesn't do anything you cannot achieve with pure JavaScript.
-								It is just a JavaScript file but estimates show it has been used on over a quarter of the sites on the web, because it makes coding simpler. "</p>
-								<h4>Benefits:</h3>
-								<p>Ease of use</p>
-								<p>Less code</p>
-								<p>Cross browser compatible</p>
+								<h1>Remember these rules when you are creating variables</h1>
+								<p>- Must start with $, _, or a letter</p><br>
+								<p>- You cannot use - or . within a variable name</p><br>
+								<p>- Make variable names unique, some words are reserved in the js universe</p><br>
+								<p>- Variables are Case Sensitive</p><br>
+								<p>- Make the name descriptive</p><br>
+								<p>-Use camelCase after the first word</p><br>
+								<!-- <p> *** Checkpoint Make a 2, 3 and 4 word variable for these values - 25, 'John Smith', 'False'</p> -->
 								</section>
 
 								<section>
-									<h1>Some Examples of jQuery Methods</h1>
-									<img src="assets/images/jq-b.jpg" alt="">
+									<h1>JS Arrays</h1>
+									<p>An array is a special variable that stores multiple values:</p>
+									<p>var myArray = [1, 2, 3, 4];</p>
+									<p>Numbering in array items</p>
+									<p>Accessing array items</p>
+									<p>using .length</p>
+									<!-- Go to update-array exercise -->
 								</section>
 
 								<section>
-									<h1>Preparing the Dom or document</h1>
-									<img src="assets/images/jq-c.jpg" alt="">
+									<h1>JS Operators</h1>
+									<img src="assets/images/js-operators.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>Document vs Window</h1>
-									<img src="assets/images/jq-d.jpg" alt="">
+									<h1>JS Operators Con't</h1>
+									<img src="assets/images/js-arith-operators.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<!-- Demo js code C02 Arithmatic operator -->
 								</section>
 
 								<section>
-									<h1>jQuery continued</h1>
-									<p>-Basic usage</p> 
-									<p>-Document v Window</p>
-									<p>-Selector power looping</p>
-									<p>-Hide/Show & Timers</p>
-									<p>-fade in / fade out</p>
-									<p>-click</p>
-									<p>-chaining</p>
-									<p>-callbacks </p>
-									<p>-Timers and code mixing</p>
-
-
+									<h1>Strings Require Operators to render correctly</h1>
+									<h2>Mixing Numbers and Strings</h2>
+									<img src="assets/images/js-string-behaviour.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<!-- Create a long sentence with the concatenation of 4 variables. "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change. -->
 								</section>
 
+								<section>
+									<!-- With a partner go to Google land and find out 3 facts about js objects -->
+									<h1>Objects - Why so important</h1>
+									<h2>"Virtually everything in javascript is an object" - Objects provide structure and order</h2>
+									<p>Object analogy - "A bag of stuff"</p>
+									<img src="assets/images/js-object.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+								</section>
+
+								<section>
+									<!-- With a partner go to Google land and find out 3 facts about js objects -->
+									<h1>Updating Objects - Dot & Literal Notation</h1>
+									<img src="assets/images/js-object-literal.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+								</section>
+
+								<section>
+									<!-- With a partner go to Google land and find out 3 facts about js objects -->
+									<h1>Updating Objects - Dot & Literal Notation</h1>
+									<img src="assets/images/js-object-dot.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+								</section>
+								
+								<!-- Pair coding -->
+<!-- 								*Checkpoint Create and object that represents you. Have a minimum of 5 properties and load the data via/with js into some html. 
+
+								**Use an object to store 3 css properties and values. Reference that object use the jquery css(); method to change some css on an html page after it loads
+
+								***Do the same as checkpoint 2, but user an array as the data reference. 
+
+								**** Change 3 css values on the page with your array as the data reference.  -->
 
 							</div>
 						</div>
