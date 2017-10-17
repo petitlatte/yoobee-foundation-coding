@@ -1276,8 +1276,12 @@ img {
 
 section {
   overflow-y: auto  !important;
-  overflow-x: hidden !important;
-  height: 700px; }
+  overflow: hidden !important;
+  height: 1200px; }
+
+a {
+  text-align: left;
+  display: block; }
 
 .slide {
   padding: 0.5em; }
