@@ -68,7 +68,15 @@ img {
 	margin: 0 auto;
 }
 
+section {
+ 	overflow-y: auto  !important;
+    overflow-x: hidden !important;
+    height: 700px;
+}
+
 .slide {
 	padding: 0.5em;
 }
+
+
 

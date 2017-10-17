@@ -11,6 +11,7 @@
 	  history: true,
 	  center: false,
 	  keyboard: true,
+	  scroll: true,
 	  transition: 'none',
 	  width: '95%',
 	  height: '95%'
