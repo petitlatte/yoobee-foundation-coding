@@ -1275,13 +1275,16 @@ img {
   margin: 0 auto; }
 
 section {
-  overflow-y: auto  !important;
-  overflow: hidden !important;
-  height: 1200px; }
+  overflow-y: scroll  !important;
+  overflow: scroll !important;
+  height: 800px; }
 
 a {
   text-align: left;
   display: block; }
+
+pre {
+  font-size: 1.1em !important; }
 
 .slide {
   padding: 0.5em; }

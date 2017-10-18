@@ -5,6 +5,8 @@
 	<title>Foundation Coding</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/fonts/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="assets/css/prism-okaidia.css">
 	<link rel="stylesheet" href="assets/css/custom.min.css">
 </head>
 	<!-- data attribute for js validation -->
@@ -27,21 +29,49 @@
 								</section>
 
 								<section>
-									<h1>Self Invoking Functions / Iffe</h1>
+									<h1>Self Invoking Functions / Iife</h1>
 									<h2>Example here</h2>
 									<a href="https://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript">https://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript</a>
 									<img src="assets/images/iffe.jpg" alt="">
 									<img src="assets/images/iffe-exp.jpg" alt="">
 								</section>
-
-								<!-- 								***Checkpoint - Apply at least three coding conventions improvement to this demo code. 
-
+								<!--***Checkpoint - Apply at least three coding conventions improvement to this demo code. 
 								- Also encompass all of the code in a self invoking function. --> 
-
 								<section>
 									<h1>Self Invoking Function Expression</h1>
 									<h2>Variables / Functions / Public / Private</h2>
 									<img src="assets/images/sife.jpg" alt="">
+								</section>
+
+								<section>
+									<h1>Code Review</h1>
+									<h2>Functions within functions & Scope</h2>
+									<pre><code class="language-javascript">
+										// Self invoking function expression
+										var aFunction = function(){
+											var private = 'a string';
+											// We can console.log(a);
+											// It is in the local scope of this function
+										}
+										
+										// Var a is not accessible to this log.
+										// Var a is private and not in the global 
+										// scope. var a is within aFunction
+										console.log(a);
+
+										function bFunction(){
+											// This function tries to return
+											// var a. But var a is private and within 
+											// aFunction. So NOT available/visible to this 
+											// function.
+											return a;
+										}
+										
+										//invoke bFunction
+										console.log(bFunction());
+
+										//Immediately invoked function 
+									</code></pre>
 								</section>
 
 								<section>
@@ -57,22 +87,12 @@
 								<section>
 									<h1>Hoisting</h1>
 									<h2>In relation to invoking functions & variables</h2>
-									<img src="assets/images/data-recap-b.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
-								</section>
-
-								<section>
-									<h1>Decisions - Conditionals / If </h1>
-									<h2>Variables </h2>
-									<img src="assets/images/data-recap-b.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<img src="assets/images/hoisting.jpg" alt="">
 								</section>
 
 								<section>
 									<h1>Decisions- Switch Statement</h1>
-									<h2>Variables </h2>
-									<img src="assets/images/data-recap-b.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<img src="assets/images/switch.jpg" alt="">
 								</section>
 
 							</div>
@@ -83,6 +103,7 @@
 
 			<script src="assets/js/jquery.js"></script>
 			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="assets/js/prism.js"></script>
 			<script src="assets/js/bundle.js"></script>
 	</body>
 </html>
