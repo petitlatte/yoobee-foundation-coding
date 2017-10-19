@@ -213,6 +213,36 @@
 									Comment once completed and push to git as a repo called js-dom-queries
 									***All vanilla.js i.e. no jquery allowed  
 								-->
+
+								<section>
+									<h1>Creative Code Session</h1>
+									<p>- Canvas and Audio capability</p>
+									<p>- Lets make an in browser sampler</p>
+									<p>- HTML design</p>
+									<p>- Js coded</p>
+									<p>- Git teams</p>
+									<pre>
+										<code class="language-javascript"">
+											app.cardSound = function(){
+
+												var snd = new Audio("video/click.wav"); // buffers automatically when created
+												snd.volume = 0.1;
+												var elements = document.getElementsByClassName('card');
+
+												//Play the audio file
+												var playTime = function(e){
+													snd.play();
+												};
+
+												// loop for all elements in array to apply event listener
+												for (var i = elements.length - 1; i >= 0; i--) {
+													elements[i].addEventListener("mouseenter", playTime, false);
+												}
+
+											};
+										</code>
+									</pre>
+								</section>
 							</div>
 						</div>
 					</body>
