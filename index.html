@@ -103,10 +103,80 @@
 
 								<section>
 									<h1>Do While Loops</h1>
-
-										</code
-									></pre>
+									<a href="https://www.w3schools.com/jsref/jsref_dowhile.asp">Example at w3</a>
+									<p>This loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+									<pre>
+										<code class="language-javascript">
+											var text = "";
+											var i = 0;
+											do {
+											    text += "The number is " + i;
+											    i++;
+											}
+											while (i < 5);
+										</code>
+									</pre>
 								</section>
+
+								<section>
+									<h1>Duckett Example</h1>
+									<a href="http://javascriptbook.com/code/c04/example.html">Full Example at Duckett Web Site</a>
+									<p>Code and example</p>
+
+									<pre>
+										<code class="language-javascript">
+											var table = 3;             // Unit of table
+											var operator = 'addition'; // Type of calculation
+											var i = 1;                 // Set counter to 1
+											var msg = '';              // Message
+
+											if (operator === 'addition') {
+											  // Do addition
+											  while (i < 11) {
+											    msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
+											    i++;
+											  }
+											} else {
+											  // Do multiplication
+											  while (i < 11) {
+											    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+											    i++;
+											  }
+											}
+
+											// Write the message into the page
+											var el = document.getElementById('blackboard');
+											el.innerHTML = msg;
+										</code>
+									</pre>
+								</section>
+
+								<section>
+									<h1>setTimeout / setInterval</h1>
+
+								</section>
+
+								<section>
+									<h1>Another for loop</h1>
+									<pre>
+										<code class="language-javascript">
+											
+											// Example
+											var ourArray = [];
+												
+											for (var i = 0; i < 5; i++) {
+											  ourArray.push(i);
+											}
+
+											// Setup
+											var myArray = [];
+
+											// Can you tell what this code is doing?
+										</code>
+								    </pre>
+								</section>
+
+								<!-- Checkpoint, run a loop after 5 seconds. -->
 
 								<section>
 									<h1>An Infinite Loop</h1>
