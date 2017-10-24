@@ -17,75 +17,103 @@
 					<body>
 						<div class="reveal">
 							<div class="slides">
-								
+
 								<section>
-									<h1>Audio Re-Analysis</h1>
-									<h2>- The audio object</h2>
-									<a href="https://www.w3schools.com/jsref/dom_obj_audio.asp">https://www.w3schools.com/jsref/dom_obj_audio.asp</a>
-									<h2>- Code check</h2>
-									<h2>- Making it work on your own. A 3 button sampler:</h2>
-									<h3> - Make 3 square or oblong html divs on your page that represent sampler buttons. When you click each div, each button should play a separate sound.</h3>
-									<h3> <i>Before you begin coding, break the challenge into an actionable list of items that your need to complete. <br> This will help with solving the problem/challenge.</i></h3>
-									<h3> - Write some js to make at least 1 sample play when you click a div</h3>
-									<h3> - Try to assign each sample to a different div click event. E.g. when the 1st div is clicked, sample-a plays, 2nd div, sample b plays etc. </h3> <br>
-									<h2>- Re-confirm 3 key todo's with your group for the team sampler project. We will work on this together from Wednesday. // One member should create a repo and add 3 collaborators</h2>
-								</section>
-			
-								<section>
-									<h1>A World Represented by objects</h1>
-									<img src="assets/images/all-objects.jpg" alt="">
+									<h1>Loops</h1>
+									<img src="assets/images/loop.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>Exploring the Window Object</h1>
-									<img src="assets/images/window-object.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
-
-								</section>
-
-								<section>
-									<h1>Exploring the Document Object</h1>
-									<img src="assets/images/document-object-model.jpg" alt="">
+									<h1>Loop Counter</h1>
+									<img src="assets/images/loop-counter.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>Exploring Global Objects</h1>
-									<img src="assets/images/global-object.jpg" alt="">
+									<h1>Looping</h1>
+									<img src="assets/images/looping.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>Window - Detail</h1>
-									<img src="assets/images/global-object.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<h1>For Loops</h1>
+									<p>As long as the condition within the loop is true, the curly brackett code block will continue to run.</p>
+									<p>Notice how the <b>i</b> variable within the condition itself is set, tested then incremented.</p>
+									<a href="http://javascriptbook.com/code/c04/for-loop.html">Duckett online example</a>
+									<pre>
+										<code class="language-javascript">
+											var scores = [24, 32, 17];      // Array of scores
+											var arrayLength = scores.length;// Items in array
+											var roundNumber = 0;            // Current round
+											var msg = '';                   // Message
+
+											// Loop through the items in the array
+											for (var i = 0; i < arrayLength; i++) {
+
+											  //Try using a console.log within the loop to visualize it:
+												console.log('a');
+
+											  // Arrays are zero based (so 0 is round 1)
+											  // Add 1 to the current round
+											  roundNumber = (i + 1);
+
+											  // Write the current round to message
+											  msg += 'Round ' + roundNumber + ': ';
+
+											  // Get the score from the scores array
+											  msg += scores[i] + '<br />';
+											}
+
+											document.getElementById('answer').innerHTML = msg;
+										</code
+									></pre>
+								</section>
+
+
+								<section>
+									<h1>While Loops</h1>
+									<p>We use the previous for loops when the number of iterations are known. We use while loops when the number of iterations are unknown. </p>
+									<p>Simple while loop syntax:</p>
+									<pre>
+										<code class="language-javascript">
+											// When the number of iterations are not known
+											while( i < 10)
+											{
+											    //Some code goes here
+											}
+										</code>
+									</pre>
+									<a href="http://javascriptbook.com/code/c04/while-loop.html">Duckett online example</a>
+									<pre>
+										<code class="language-javascript">
+											var i = 1;       // Set counter to 1
+											var msg = '';    // Message
+
+											// Store 5 times table in a variable
+											while (i < 10) {
+											  msg += i + ' x 5 = ' + (i * 5) + '<br />';
+											  i++;
+											}
+
+											document.getElementById('answer').innerHTML = msg;
+										</code
+									></pre>
 								</section>
 
 								<section>
-									<h1>Document - Detail</h1>.
-									<img src="assets/images/global-object.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<h1>Do While Loops</h1>
+
+										</code
+									></pre>
 								</section>
 
 								<section>
-									<h1>String - Detail</h1>
-									<img src="assets/images/global-object.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
+									<h1>An Infinite Loop</h1>
+
+										</code
+									></pre>
 								</section>
-
-								<section>
-									<h1>String | Math | Date - Checkpoint</h1>
-									<h2>***Checkpoint</h1>
-									<h3>- Reference both the Math and Date global object/s</h3>
-									<h3>- Write 2 uniquely named functions to achieve this</h3>
-									<h3>- Each function should reference the global object by assigning it to a variable</h3>
-									<h3>- Use a property or method of the global MAth and/or Date object to print something to the D.O.M</h3>
-									<h3>- If you finish early, try to use an argument/parameter within your function design. </h3>
-								</section>
-
-
-								<section>Previous Sibling & Next Sibling</section>
 
 								<section>
 									<h1>Variable Scope - Global / Private and the Window</h1>
@@ -95,10 +123,10 @@
 									<h1>Functions and Return</h1>
 								</section>
 
-								<section>'this' A Subtle Exploration</section>
+								<section>
+									<h1>'this' A Subtle Exploration</h1>
+								</section>
 
-								<section>Loops</section>
-		
 							</div>
 						</div>
 					</body>
