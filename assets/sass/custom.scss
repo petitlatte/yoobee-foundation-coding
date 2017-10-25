@@ -52,7 +52,7 @@ h6 {
 }
 
 p {
-	font-size: 1.1em;
+	font-size: 1.3em;
 	padding-left: 0.4em;
 	margin-bottom: 1.8em;
 	margin-top: 2.2em;
@@ -98,6 +98,14 @@ b {
 	font-weight: 800 !important;
 	font-size: 1.15em !important;
 	color: #000 !important;
+}
+
+.language-javascript span.token.operator {
+	background-color: #2a2a2a !important;
+}
+
+code.language-javascript {
+	font-size: 1.3em !important;
 }
 
 .slide {

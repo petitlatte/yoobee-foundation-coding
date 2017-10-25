@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .what {
+      color: yellow;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <p class="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum reprehenderit eveniet repellat omnis sapiente praesentium, quo. Est maiores eveniet, ea voluptas, in molestias optio magni, blanditiis, vitae cupiditate doloribus sint.</p>
+  <p>Natus, facilis, iure. Consectetur obcaecati, rerum maiores beatae suscipit! Earum possimus tenetur alias ipsa distinctio, eum atque. Fugiat, quia. Sed excepturi beatae non animi odio provident quisquam, dolores fugiat aliquam.</p>
+  <p>Nam doloremque, sapiente nesciunt alias earum tenetur corporis consequatur atque repellat qui natus maxime mollitia sed, labore nobis officiis quia eveniet consequuntur laboriosam velit tempore? Sunt consequatur laudantium facilis sit!</p>
+  <p>Facere eaque ipsum omnis earum nihil accusantium commodi vitae, voluptate velit. Quasi perferendis impedit enim reiciendis veritatis velit nobis, voluptatem minima hic obcaecati sunt consequuntur reprehenderit itaque veniam dolore eius.</p>
+  <p class="five">Quaerat adipisci reiciendis modi deleniti excepturi vero dolores velit voluptas blanditiis tenetur facilis voluptatem esse ratione iure similique sint placeat officia beatae amet, iusto consequatur voluptatum, vel cumque. Eos, voluptate.</p>
+  <ul>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+    <li>This is a list element</li>
+  </ul>
+  <script>
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+         console.dir(all[i].className);
+         all[i].className = 'what';
+    }
+  </script>
+</body>
+</html>

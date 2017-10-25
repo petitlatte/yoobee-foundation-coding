@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/fonts/css/font-awesome.css">
 	<link rel="stylesheet" href="assets/css/prism.css">
-	<link rel="stylesheet" href="assets/css/prism-okaidia.css">
+	<link rel="stylesheet" href="assets/css/prism-xonokai.css">
 	<link rel="stylesheet" href="assets/css/custom.min.css">
 </head>
 	<!-- data attribute for js validation -->
@@ -17,248 +17,89 @@
 					<body>
 						<div class="reveal">
 							<div class="slides">
-
 								<section>
-									<h1>Loops</h1>
-									<img src="assets/images/loop.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
-								</section>
-
-								<section>
-									<h1>Loop Counter</h1>
-									<img src="assets/images/loop-counter.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
-								</section>
-
-								<section>
-									<h1>Looping</h1>
-									<img src="assets/images/looping.jpg" alt="">
-									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
-								</section>
-
-								<section>
-									<h1>For Loops</h1>
-									<p>As long as the condition within the loop is true, the curly brackett code block will continue to run.</p>
-									<p>Notice how the <b>i</b> variable within the condition itself is set, tested then incremented.</p>
-									<a href="http://javascriptbook.com/code/c04/for-loop.html">Duckett online example</a>
+									<h1>Loop Review - Focus on for()</h1>
+									<p>You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction then Y steps in another; for example, the idea "Go five steps to the east" could be expressed this way as a loop - Modzilla Developer Docs</p>
 									<pre>
 										<code class="language-javascript">
-											var scores = [24, 32, 17];      // Array of scores
-											var arrayLength = scores.length;// Items in array
-											var roundNumber = 0;            // Current round
-											var msg = '';                   // Message
-
-											// Loop through the items in the array
-											for (var i = 0; i < arrayLength; i++) {
-
-											  //Try using a console.log within the loop to visualize it:
-												console.log('a');
-
-											  // Arrays are zero based (so 0 is round 1)
-											  // Add 1 to the current round
-											  roundNumber = (i + 1);
-
-											  // Write the current round to message
-											  msg += 'Round ' + roundNumber + ': ';
-
-											  // Get the score from the scores array
-											  msg += scores[i] + '<br />';
-											}
-
-											document.getElementById('answer').innerHTML = msg;
-										</code
-									></pre>
-								</section>
-
-
-								<section>
-									<h1>While Loops</h1>
-									<p>We use the previous for loops when the number of iterations are known. We use while loops when the number of iterations are unknown. </p>
-									<p>Simple while loop syntax:</p>
-									<pre>
-										<code class="language-javascript">
-											// When the number of iterations are not known
-											while( i < 10)
-											{
-											    //Some code goes here
-											}
-										</code>
-									</pre>
-									<a href="http://javascriptbook.com/code/c04/while-loop.html">Duckett online example</a>
-									<pre>
-										<code class="language-javascript">
-											var i = 1;       // Set counter to 1
-											var msg = '';    // Message
-
-											// Store 5 times table in a variable
-											while (i < 10) {
-											  msg += i + ' x 5 = ' + (i * 5) + '<br />';
-											  i++;
-											}
-
-											document.getElementById('answer').innerHTML = msg;
-										</code
-									></pre>
-								</section>
-
-								<section>
-									<h1>Do While Loops</h1>
-									<a href="https://www.w3schools.com/jsref/jsref_dowhile.asp">Example at w3</a>
-									<p>This loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
-									<pre>
-										<code class="language-javascript">
-											var text = "";
-											var i = 0;
-											do {
-											    text += "The number is " + i;
-											    i++;
-											}
-											while (i < 5);
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Duckett Example</h1>
-									<a href="http://javascriptbook.com/code/c04/example.html">Full Example at Duckett Web Site</a>
-									<p>Code and example</p>
-
-									<pre>
-										<code class="language-javascript">
-											var table = 3;             // Unit of table
-											var operator = 'addition'; // Type of calculation
-											var i = 1;                 // Set counter to 1
-											var msg = '';              // Message
-
-											if (operator === 'addition') {
-											  // Do addition
-											  while (i < 11) {
-											    msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
-											    i++;
-											  }
-											} else {
-											  // Do multiplication
-											  while (i < 11) {
-											    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
-											    i++;
-											  }
-											}
-
-											// Write the message into the page
-											var el = document.getElementById('blackboard');
-											el.innerHTML = msg;
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Another for loop</h1>
-									<pre>
-										<code class="language-javascript">
-											
-											// Example
-											var ourArray = [];
-												
-											for (var i = 0; i < 5; i++) {
-											  ourArray.push(i);
-											}
-
-											// Setup
-											var myArray = [];
-
-											// Can you tell what this code is doing?
-
-										</code>
-								    </pre>
-								</section>
-
-								<section>
-									<h1>setTimeout / setInterval</h1>
-									<h2>setTimeout</h2>
-									<pre>
-										<code class="language-javascript">
-										window.setTimeout(function, milliseconds);
-										</code>
-									</pre>
-									<p>
-									The window.setTimeout() method can be written without the window prefix.
-
-									The first parameter is a function to be executed.
-
-									The second parameter indicates the number of milliseconds before execution.</p>
-									<h2>setInterval</h2>
-									<p>The setInterval() method repeats a given function at every given time-interval.
-
-									The window.setInterval() method can be written without the window prefix.
-
-									The first parameter is the function to be executed.
-
-									The second parameter indicates the length of the time-interval between each execution.
-
-									This example executes a function called "myTimer" once every second (like a digital watch).</p>
-									<pre>
-										<code class="language-javascript">
-										window.setInterval(function, milliseconds);
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>clearInterval()</h1>
-									<a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_clearinterval">Example at W3</a>
-									<pre>
-										<code class="language-javascript">
-											myVar = setInterval(function, milliseconds);
-											clearInterval(myVar)
-
-											// or
-
-											var myVar = setInterval(function(){ myTimer() }, 1000);
-
-											function myTimer() {
-											    var d = new Date();
-											    var t = d.toLocaleTimeString();
-											    // use a paragraph with an id of demo
-											    document.getElementById("demo").innerHTML = t;
-											}
-
-											function myStopFunction() {
-											    clearInterval(myVar);
+											//Breakdown of the for condition: 
+											// for ([initialExpression]; [condition]; [incrementExpression])
+											var step;
+											for (step = 0; step < 5; step++) {
+											  // Runs 5 times, with values of step 0 through 4.
+											  console.log('Walking east one step');
 											}
 										</code>
 									</pre>
 								</section>
 
 								<section>
-									<h1>clearTimeout()</h1>
-									<a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_cleartimeout">Clear Timeout Example at W3</a>
+									<h1>Using a for loop to scan the entire DOM - ***Not recommended </h1>
 									<pre>
 										<code class="language-javascript">
-											var myVar;
+											var all = document.getElementsByTagName("*");
 
-											function myFunction() {
-											    myVar = setTimeout(function(){ alert("Hello"); }, 3000);
-											}
-
-											function myStopFunction() {
-											    clearTimeout(myVar);
+											for (var i=0, max=all.length; i < max; i++) {
+											     // Do something with the element here
 											}
 										</code>
 									</pre>
 								</section>
 
-								<!-- Checkpoint, run a loop after 5 seconds. -->
-
 								<section>
-									<h1>An Infinite Loop</h1>
-
-										</code
-									></pre>
+									<h1>Remember these DOM queries for multiple element access</h1>
+									<img src="assets/images/dom-query-plural.jpg" alt="">
 								</section>
 
 								<section>
-									<h1>Variable Scope - Global / Private and the Window</h1>
+									<h1>A for loop to update multiple elements - See for-loop.html</h1>
+									<pre>
+										<code class="language-javascript">
+											var times = div.getElementsByTagName("time");
+											for (var i = 0; i < times.length; i++) {
+											    times[i].style.backgroundColor = "#d00";
+											}
+										</code>
+									</pre>
 								</section>
+
+								<section>
+									<h1>A for loop that adjusts array data</h1>
+									<pre>
+										<code class="language-javascript">
+
+											var shoppingCart = [
+											  {item: `soap`, price: 4.99},
+											  {item: `hammer`, price: 19.60},
+											  {item: `tissues`, price: 2.95},
+											];
+
+											//we want to create an array of prices only
+											//i.e data conversion/re-structuring
+
+											var prices = [];
+
+											for (let i = 0, length = shoppingCart.length; i < length; i++) {
+											   prices.push(shoppingCart[i].price);
+											}
+											 
+											console.log(prices); // [4.99, 19.60, 2.95]
+										</code>
+									</pre>
+								</section>
+
+								<!-- ***CHECKPOINT - Use a for loop to update multiple elements in your html -->
+								<!-- Actions -->
+								<!--
+									Change the css
+									Change some element content
+									Make some elemens completely dissapear
+									All actions must relate to the for loop. 
+									Grid, comment and wrap your code in functions
+									Push to the repo
+									***Remember: Having issues, console.log / console.dir is your friend
+									Change the [i] to 'a' or the variable name, as in the examples. 
+								-->
 
 								<section>
 									<h1>Functions and Return</h1>
@@ -266,6 +107,18 @@
 
 								<section>
 									<h1>'this' A Subtle Exploration</h1>
+								</section>
+
+								<section>
+									<h1>Traversing the DOM</h1>
+								</section>
+	
+								<section>
+									<h1>Creating elements with js</h1>
+								</section>
+
+								<section>
+									<h1>Events</h1>
 								</section>
 
 							</div>
