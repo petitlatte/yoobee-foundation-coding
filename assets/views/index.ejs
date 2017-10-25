@@ -105,7 +105,7 @@
 									<h1>Functions and Return</h1>
 									<h2>The return statement ends function execution and specifies a value to be returned to the function caller.</h2>
 									<p>return ENDS a function</p>
-									<p>return also produced a value that can be passed around from within your code. This is a big clue that makes js Functional programming so Expressive.</p>
+									<p>return also produces a value that can be passed around from within your code. This is a big clue that makes js Functional programming so Expressive.</p>
 									<pre>
 										<code class="language-javascript">
 											function square(x) {
@@ -125,7 +125,86 @@
 								</section>
 
 								<section>
-									<h1>Functions & return</h1>
+									<h1>Functions & return more examples</h1>
+									<pre>
+										<code class="language-javascript">
+											// We could easily adjust and expand on this
+											// It is currently returning an object.
+
+											function BlockIDA() {
+											    return {
+											            "s":"Images/Block_01.png"
+											            ,"g":"Images/Block_02.png"
+											            ,"C":"Images/Block_03.png"
+											            ,"d":"Images/Block_04.png"
+											    };
+											}
+
+											// Or here we can return an array
+											// With slightly adjusted syntax
+											function BlockIDB() {
+												var myArray = [];
+
+											    return myArray;
+											}
+
+											// Or with the same pattern as BlockIDA
+											function BlockIDC() {
+											    return [1,2,3,'hi there', 'really', false];
+											}
+
+
+											// How do we grab the values or returned items?
+											// Easy, just pull the trigger/invoke
+
+											console.log(BlockIDA());
+
+											var whatIsThis = BlockIDA();
+
+
+								
+
+										</code>
+									</pre>
+								</section>
+
+								<section>
+									<h1>And for the adventurous insomniacs out there:</h1>
+									<pre>
+										<code class="language-javascript">
+											function a() {
+											    alert('A');
+											}
+											//alerts 'A', returns undefined
+
+											function b() {
+											    alert('B');
+											    return a;
+											}
+											//alerts 'B', returns function a
+
+											function c() {
+											    alert('C');
+											    return a();
+											}
+											//alerts 'C', alerts 'A', returns undefined
+
+											alert("Function 'a' returns " + a());
+											alert("Function 'b' returns " + b());
+											alert("Function 'c' returns " + c());
+
+											//And so on....
+
+											function d() {
+											    function e() {
+											        alert('E');
+											    }
+											    return e;
+											}
+											d()();
+											//alerts 'E'
+										</code>
+									</pre>		
 								</section>
 
 								<section>
