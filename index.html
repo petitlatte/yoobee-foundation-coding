@@ -17,212 +17,56 @@
 					<body>
 						<div class="reveal">
 							<div class="slides">
-								<section>
-									<h1>Loop Review - Focus on for()</h1>
-									<p>You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction then Y steps in another; for example, the idea "Go five steps to the east" could be expressed this way as a loop - Modzilla Developer Docs</p>
-									<pre>
-										<code class="language-javascript">
-											//Breakdown of the for condition: 
-											// for ([initialExpression]; [condition]; [incrementExpression])
-											var step;
-											for (step = 0; step < 5; step++) {
-											  // Runs 5 times, with values of step 0 through 4.
-											  console.log('Walking east one step');
-											}
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Using a for loop to scan the entire DOM - ***Not recommended </h1>
-									<pre>
-										<code class="language-javascript">
-											var all = document.getElementsByTagName("*");
-
-											for (var i=0, max=all.length; i < max; i++) {
-											     // Do something with the element here
-											}
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Remember these DOM queries for multiple element access</h1>
-									<img src="assets/images/dom-query-plural.jpg" alt="">
-								</section>
-
-								<section>
-									<h1>A for loop to update multiple elements - See for-loop.html</h1>
-									<pre>
-										<code class="language-javascript">
-											var times = div.getElementsByTagName("time");
-											for (var i = 0; i < times.length; i++) {
-											    times[i].style.backgroundColor = "#d00";
-											}
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>A for loop that adjusts array data</h1>
-									<pre>
-										<code class="language-javascript">
-
-											var shoppingCart = [
-											  {item: `soap`, price: 4.99},
-											  {item: `hammer`, price: 19.60},
-											  {item: `tissues`, price: 2.95},
-											];
-
-											//we want to create an array of prices only
-											//i.e data conversion/re-structuring
-
-											var prices = [];
-
-											for (var i = 0, length = shoppingCart.length; i < length; i++) {
-											   prices.push(shoppingCart[i].price);
-											}
-											 
-											console.log(prices); // [4.99, 19.60, 2.95]
-										</code>
-									</pre>
-								</section>
-
-								<!-- ***CHECKPOINT - Use a for loop to update multiple elements in your html -->
-								<!-- Actions -->
-								<!--
-									Change the css
-									Change some element content
-									Make some elemens completely dissapear
-									All actions must relate to the for loop. 
-									Grid, comment and wrap your code in functions
-									Push to the repo
-									***Remember: Having issues, console.log / console.dir is your friend
-									Change the [i] to 'a' or the variable name, as in the examples. 
-								-->
-
-								<section>
-									<h1>Functions and Return</h1>
-									<h2>The return statement ends function execution and specifies a value to be returned to the function caller.</h2>
-									<p>return ENDS a function</p>
-									<p>return also produces a value that can be passed around from within your code. This is a big clue that makes js Functional programming so Expressive.</p>
-									<pre>
-										<code class="language-javascript">
-											function square(x) {
-											   return x * x;
-											}
-											var demo = square(3);
-											// demo will equal 9
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Functions and Return</h1>
-									<h2>What can a function return? a string, a number, a boolean, an array, an object and.....EVEN ANOTHER FUNCTION</h2>
-									<iframe src="https://giphy.com/embed/l4Ho0At2UD2d7WyD6" width="800" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/latelateshow-james-corden-late-show-l4Ho0At2UD2d7WyD6"></a></p>
-									<h2>Yes, Even Another Function.</h2>
-								</section>
-
-								<section>
-									<h1>Functions & return more examples</h1>
-									<pre>
-										<code class="language-javascript">
-											// We could easily adjust and expand on this
-											// It is currently returning an object.
-
-											function BlockIDA() {
-											    return {
-											            "s":"Images/Block_01.png"
-											            ,"g":"Images/Block_02.png"
-											            ,"C":"Images/Block_03.png"
-											            ,"d":"Images/Block_04.png"
-											    };
-											}
-
-											// Or here we can return an array
-											// With slightly adjusted syntax
-											function BlockIDB() {
-												var myArray = [];
-
-											    return myArray;
-											}
-
-											// Or with the same pattern as BlockIDA
-											function BlockIDC() {
-											    return [1,2,3,'hi there', 'really', false];
-											}
-
-
-											// How do we grab the values or returned items?
-											// Easy, just pull the trigger/invoke
-
-											console.log(BlockIDA());
-
-											var whatIsThis = BlockIDA();
-
-
 								
+								<section>
+									<h1>Checkpoint Review</h1>
+									<h2>Before we move to our first formative please complete at least 3 checkpoints:</h2>
+									<h2>Please remember to have:</h2>
+									<p>Code completed and working without error</p>
+									<p>Code cleanly typed, gridded with relevant comments</p>
+									<p>Code pushed to the relevant repo with a logical and accurate repo title</p>
+									<p>Please have this completed before Tuesday 3.30pm</p>
+									<p>See next slide for details</p>
+								</section>
 
+								<section>
+									<h1>Compulsory checkpoints</h1>
+									<pre>
+										<code class="language-markdown">
+											A:
+
+											1. Use a DOM query to access some html or the DOM
+
+											2. Use a loop to change the css of multiple elements
+
+											3. Example code is at today's class repo: for-loop.html
+
+											B: 
+
+											1. Create a list of at least 5 items with html
+
+											2. Assign each item with either a class or an id or both
+
+											3. Use js to access the dom and adjust css
+
+											4. Use at least 3 separate getElement dom Query methods
+
+											5. Create three separate functions for each of the dom queries and related css adjustment
+
+											6. Wrap all 3 functions and function invocations in an IIFFE
+
+											7. Comment once completed and push to git as a repo called js-dom-queries (edited)
+
+											C:
+
+											1. Any previous checkpoint of your choice // Or some new custom js that is based around something you are interested in. 
+
+											
 										</code>
 									</pre>
+								
 								</section>
 
-								<section>
-									<h1>And for the adventurous ones out there:</h1>
-									<h3>A Function Referencing a Function</h3>
-									<pre>
-										<code class="language-javascript">
-											function a() {
-											    alert('A');
-											}
-											//alerts 'A', returns undefined
-
-											function b() {
-											    alert('B');
-											    return a;
-											}
-											//alerts 'B', returns function a
-
-											function c() {
-											    alert('C');
-											    return a();
-											}
-											//alerts 'C', alerts 'A', returns undefined
-
-											alert("Function 'a' returns " + a());
-											alert("Function 'b' returns " + b());
-											alert("Function 'c' returns " + c());
-
-											//And so on....
-
-											function d() {
-											    function e() {
-											        alert('E');
-											    }
-											    return e;
-											}
-											d()();
-											//alerts 'E'
-										</code>
-									</pre>		
-								</section>
-
-								<section>
-									<h1>'this' a Subtle Exploration</h1>
-								</section>
-
-								<section>
-									<h1>Traversing the DOM</h1>
-								</section>
-	
-								<section>
-									<h1>Creating elements with js</h1>
-								</section>
-
-								<section>
-									<h1>Events</h1>
-								</section>
 
 							</div>
 						</div>
