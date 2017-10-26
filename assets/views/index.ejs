@@ -79,7 +79,7 @@
 
 											var prices = [];
 
-											for (let i = 0, length = shoppingCart.length; i < length; i++) {
+											for (var i = 0, length = shoppingCart.length; i < length; i++) {
 											   prices.push(shoppingCart[i].price);
 											}
 											 
@@ -169,7 +169,8 @@
 								</section>
 
 								<section>
-									<h1>And for the adventurous insomniacs out there:</h1>
+									<h1>And for the adventurous ones out there:</h1>
+									<h3>A Function Referencing a Function</h3>
 									<pre>
 										<code class="language-javascript">
 											function a() {
