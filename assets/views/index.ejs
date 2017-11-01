@@ -117,6 +117,31 @@
 								
 								<section>
 									<h1>Events - Changing default event behaviour</h1>
+									<h2>Using The Event Object</h2>
+									<h3>Also see event-object-demo.html</h3>
+									<pre>
+										<code class="language-javascript">
+											var grab = document.getElementById('thing');
+											grab.addEventListener('click', myFunction, false);
+
+											function myFunction(event) { 
+												console.log(event);
+											}
+										</code>
+									</pre>
+								</section>
+
+								<section>
+									<h1>Events - Placing multiple listeners with a loop</h1>
+									<img src="assets/images/event-multiple-pattern.jpg" alt="">
+								</section>
+
+								<section>
+									<h1>jQuery plugins</h1>
+									<h1>forEach</h1>
+									<h1>Returning functions continued</h1>
+									<h1>object cache pattern</h1>
+									<h1>basic object and method pattern</h1>
 								</section>
 
 							</div> 

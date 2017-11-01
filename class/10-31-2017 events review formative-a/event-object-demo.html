@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="thing">Click on any elements in this document to find out which element triggered the onclick event.</p>
+
+<a id="googleLink" href="http://www.google.com"><h1>Link To Google</h1></a>
+
+
+<p id="demo"></p>
+
+<script>
+	var grab = document.getElementById('thing');
+	grab.addEventListener('click', myFunction, false);
+
+	var grabLink = document.getElementById('googleLink');
+	grabLink.addEventListener('click', anotherFunction, false);
+
+	function myFunction(event) { 
+		console.log(event);
+	}
+
+	function anotherFunction(event){
+		// preventing the jump to link
+		event.preventDefault();
+		console.log(event);
+		console.dir(this);
+	}
+</script>
+
+</body>
+</html>
