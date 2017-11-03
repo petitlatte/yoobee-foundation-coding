@@ -10,21 +10,22 @@
 <p id="demo"></p>
 
 <script>
-	var grab = document.getElementById('thing');
-	grab.addEventListener('click', myFunction, false);
+	// var grab = document.getElementById('thing');
+	// grab.addEventListener('click', myFunction, false);
 
 	var grabLink = document.getElementById('googleLink');
 	grabLink.addEventListener('click', anotherFunction, false);
 
-	function myFunction(event) { 
-		console.log(event);
-	}
+	// function myFunction(event) { 
+	// 	console.log(event);
+	// }
 
-	function anotherFunction(event){
+	function anotherFunction(jared){
 		// preventing the jump to link
-		event.preventDefault();
-		console.log(event);
-		console.dir(this);
+		jared.preventDefault();
+		console.log(jared);
+		// *** what is this?
+		// console.log(this);
 	}
 </script>
 
