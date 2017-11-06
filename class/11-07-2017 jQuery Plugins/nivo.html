@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<head>
+    <title>Nivo Slider Responsive Demo</title>
+    <link rel="stylesheet" href="nivo-assets/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-assets/nivo-slider.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="nivo-assets/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+                <img src="nivo-assets/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="nivo-assets/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="nivo-assets/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="nivo-assets/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</body>
+</html>
