@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		h1 {padding: 0.4em;}
+	</style>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+	(function($){
+			jQuery.fn.extend({
+
+				// Plugin Name
+				redBorder: function(options) {
+					
+					// Defaults options are set here
+					// Every default goes within the { } brackets as seen below
+					// A comma separates the different values
+					var defaults = {  
+						property: "border",
+						value: "3px solid red"  
+						
+					};  
+					var options = $.extend(defaults, options);  
+					
+					return this.each(function() {   
+					
+						// Add 'options.' before the value 
+						// This is done to inform jQuery it is part of the default options
+						jQuery(this).css(options.property, options.value);
+					
+					});
+
+				}
+
+			});
+		})(jQuery); 
+
+		$("h1").redBorder({property: "background",value: "blue"});
+
+	</script>
+</body>
+</html>
