@@ -17,115 +17,28 @@
 					<body>
 						<div class="reveal">
 							<div class="slides">
-								
 								<section>
-									<h1>jQuery plugins</h1>
-									<a href="https://tutorialzine.com/2013/04/50-amazing-jquery-plugins"><h3>1. Some plugin examples</h3></a>
-									<a href="https://hannahdnallen.wordpress.com/2014/02/20/steps-to-installing-a-jquery-plugin/"><h2>2. A basic breakdown on installing jQuery plugins - With Nivo Slider</h2></a>
-									<h3>The basic code pattern for a jQuery plugin:</h3>
-									<pre>
-										<code class="language-javascript">
-											// Options for nivo slider, most jQuery plugins
-											// take an object as an argument with many properties
-											// and methods that are pre-defined/built for your own usage
-
-											$('#slider').nivoSlider({ 
-											    effect: 'random',                 // Specify sets like: 'fold,fade,sliceDown' 
-											    slices: 15,                       // For slice animations 
-											    boxCols: 8,                       // For box animations 
-											    boxRows: 4,                       // For box animations 
-											    animSpeed: 500,                   // Slide transition speed 
-											    pauseTime: 3000,                  // How long each slide will show 
-											    startSlide: 0,                    // Set starting Slide (0 index) 
-											    directionNav: true,               // Next & Prev navigation 
-											    controlNav: true,                 // 1,2,3... navigation 
-											    controlNavThumbs: false,          // Use thumbnails for Control Nav 
-											    pauseOnHover: true,               // Stop animation while hovering 
-											    manualAdvance: false,             // Force manual transitions 
-											    prevText: 'Prev',                 // Prev directionNav text 
-											    nextText: 'Next',                 // Next directionNav text 
-											    randomStart: false,               // Start on a random slide 
-											    beforeChange: function(){},       // Triggers before a slide transition 
-											    afterChange: function(){},        // Triggers after a slide transition 
-											    slideshowEnd: function(){},       // Triggers after all slides have been shown 
-											    lastSlide: function(){},          // Triggers when last slide is shown 
-											    afterLoad: function(){}           // Triggers when slider has loaded 
-											});
-											
-										</code>
-									</pre>
-								</section>
-
-								<section>
-									<h1>Selecting jQuery Plugins</h1>
-
-									<h2>- Google search the type of plugin you are looking for</h2>
-									<h2>- Check the demo version of the plugin</h2>
-									<h2>- Check if there is a github repository. How many stars, commits, issues does the plugin have</h2>
-									<h2>- Does the plugin have any documentation</h2>
-									<h2>- Check for cross browser compatibility</h2>
-									<h2>- Is the plugin mobile responsive</h2>
-								</section>
-
-								<section>
-									<h1>A jQuery plugin under the hood</h1>
-									<a href="http://css-plus.com/2010/05/adding-user-options-to-your-jquery-plugin/">
-										<h3>Full Example Here</h3>
+									<h1>UI Libraries</h1>
+									<a href="http://getbootstrap.com/">
+										<p>1. Bootstrap</p>
 									</a>
-									<pre>
-										<code class="language-javascript">
-											// Here is how a jQuery plugin is written
-											// It illustrates why and how objects are consumed by the 
-											// method/plugin 
-											(function($){
-												jQuery.fn.extend({
+									<a href="https://bulma.io/">
+										<p>2. Bulma css</p>
+									</a>
+									<a href="https://semantic-ui.com/">
+										<p>3. Semantic UI</p>
+									</a>
+									<a href="http://materializecss.com/">
+										<p>4. Materialize css</p>
+									</a>
+									<p>Remember that all libraries can help with speeding up development, and saving time.</p>
+									<p>However, once you take on a library you also have to deal with it's baggage and idiosyncrasies. </p>
 
-													// Plugin Name
-													redBorder: function(options) {
-														
-														// Defaults options are set here
-														// Every default goes within the { } brackets as seen below
-														// A comma separates the different values
-														var defaults = {  
-															property: "border",
-															value: "3px solid red"  
-															
-														};  
-														var options = $.extend(defaults, options);  
-														
-														return this.each(function() {   
-														
-															// Add 'options.' before the value 
-															// This is done to inform jQuery it is part of the default options
-															jQuery(this).css(options.property, options.value);
-														
-														});
-
-													}
-
-												});
-											})(jQuery); 
-										</code>
-									</pre>
 								</section>
 
 
-
-						        <!--  Returning values from functions
-								      Passing and returning objects within functions
-								-->
-
-							    <!--<section>
-										<h1>jQuery plugins</h1>
-										<h1>forEach</h1>
-										<h1>Returning functions continued</h1>
-										<h1>object cache pattern</h1>
-										<h1>basic object and method pattern</h1>
-										making code more eloquent
-								</section> -->
-
-							</div> 
-						</div>
+							</div> <!-- slides ENDS -->
+						</div> <!-- reveal ENDS -->
 					</body>
 
 			</div> <!-- Reveal Div Ends -->
