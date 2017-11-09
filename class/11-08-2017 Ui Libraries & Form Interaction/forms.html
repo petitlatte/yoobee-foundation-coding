@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				
-				<form id="myForm">
+				<form id="myForm" name="a-form">
 				  <div class="form-group">
 				    <label for="exampleFormControlInput1">Email address</label>
 				    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -56,34 +56,87 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.js"></script>
 	<script>
 
+	// A. Cloud object form loop pattern with jQuery .each()********************************
 
+		// var obj ={};
 
-		var obj ={};
+		// var init = function(){
+		// 	var btn = document.getElementById('subBtn');
+		// 	btn.addEventListener('click', myFunction, false);	
+		// }();
 
-		var init = function(){
-			var btn = document.getElementById('subBtn');
-			btn.addEventListener('click', myFunction, false);	
-		}();
+		// // Scan forms
+		// function myFunction() {
+		// 	console.log('myFunction is working');
+		// 	$('#myForm input, #myForm select, #myForm textarea').each(
+		// 		console.log('each');
+		// 	    function(index){  
+		// 	        var input = $(this);
+		// 	        // alert('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
+		// 	        obj['prop- ' + index ] = input.val();
+		// 	    }
+		// 	);
 
-		// Scan forms
-		function myFunction() {
-			console.log('myFunction is working');
-			$('#myForm input, #myForm select, #myForm textarea').each(
-				console.log('each');
-			    function(index){  
-			        var input = $(this);
-			        // alert('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
-			        obj['prop- ' + index ] = input.val();
-			    }
-			);
+		// 	theConsole();
 
-			theConsole();
+		// }
 
+		// function theConsole(){
+		// 	console.log(obj);
+		// }
+
+	// A. ***ENDS
+
+	// B. Using the document objects forms collection
+
+	// The document object of a web page has a property named forms which is a JavaScript array that holds references to all the form objects on the page. We can get a reference to individual forms by using the index of the forms or by using their names. Please note that this array’s index begins at 0.
+
+	// Setup an onlclick event handler for the form. This ensures that
+	// we get to physically type some real values into the form before 
+	// accessing the value data with the js below.
+	document.getElementById('subBtn').onclick = function(){
+		// Access the forms property of the document object
+		// var oForm = document.forms[0]; same as line below
+		var oForm = document.forms['a-form'];
+
+		// Access the elements of the form property. We could access the 
+		// values of the form with index notation into the array via the els
+		// variable, eg els[0].value. However this is a perfect chance to use a loop
+		// to cycle through the form - loopFormEls(). 
+		var els = oForm.elements;
+		console.log(els);
+		var values;
+		function loopFormEls(elements){
+			// create an empty array to push values from the loop to.
+			// this is a common and useful pattern i.e = empty array.  
+			var valuesPlease = [];
+			// use a for loop to cycle through the form elements
+			// and extract their value/s.   
+			for (var i = 0; i < elements.length; i++) {
+				valuesPlease.push(elements[i].value);
+			};
+			// 'values' below is the variable above/outside the function
+			// this means that we can access this array outside of the function
+			// with ease by using the values variable declared above the function
+			values = valuesPlease;
+
+			// here we also return the newly populated array so invoking the function
+			// also gives us all the values in the array
+			return valuesPlease;
 		}
 
-		function theConsole(){
-			console.log(obj);
-		}
+		loopFormEls();
+
+		// values = loopFormEls();
+		console.log(values);
+	}
+
+
+
+
+
+
+
 
 
 
