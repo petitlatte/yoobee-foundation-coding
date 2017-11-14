@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Foundation Coding</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/custom.min.css">
+</head>
+	<!-- data attribute for js validation -->
+	<body data-page="membership">
+		  
+			<div class="reveal">
+
+					<body>
+						<div class="reveal">
+							<div class="slides">
+
+								<section>
+									<h1>Maintaining a healthy lifestyle within the industry</h1>
+									<iframe src="https://giphy.com/embed/DohrzSCB07moM" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chimpanzee-DohrzSCB07moM">via GIPHY</a></p>
+								</section>
+
+								<section>
+									<h1>Ergonomics:</h1>
+									<a href="https://www.youtube.com/watch?v=ZLwIP8cBaWA">
+										<p>Video here</p>
+									</a>
+									<p>List your top 3 tips for improving ergonomics and computer work</p>
+									<p>What sports or hobbies are ideal for couteracting a day in the office</p>
+								</section>
+
+								<section>
+									<h1>The question of Social Media:</h1>
+									<a href="https://www.youtube.com/watch?v=CkMh6xdJNeM">
+										<p>Video here</p>
+									</a>
+									<a href="https://www.youtube.com/watch?v=vOSYmLER664">
+										<p>Video Here</p>
+									</a>
+									<p>List 3 pro's and con's for using social media. What do you think is the answer to find a healthy balance when using social media as a web proffessional</p>
+								</section>
+
+								<section>
+									<h1>What is AGILE</h1>
+									<a href="https://www.youtube.com/watch?v=Z9QbYZh1YXY">
+										<p>Video here</p>
+									</a>
+								</section>
+
+								<section>
+									<h1>Health and sanity:</h1>
+									<a href="https://www.youtube.com/watch?v=Z9QbYZh1YXY">
+										<p>Video here</p>
+									</a>
+								</section>wa
+
+
+								
+
+							</div>
+						</div>
+					</body>
+
+			</div> <!-- Reveal Div Ends -->
+
+			<script src="assets/js/jquery.js"></script>
+			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="assets/js/bundle.js"></script>
+	</body>
+</html>
