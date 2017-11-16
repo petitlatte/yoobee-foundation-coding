@@ -16,16 +16,20 @@
 
 		//The json ajax method provided by jQuery
 		//The note the 'data' returned via the getJSON method is already a json object
-		$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
+		$.getJSON( "https://jsonplaceholder.typicode.com/users", 
+			function( data ) {
 			console.log(data);
 			for (var i = 0; i < data.length; i++) {
 				items.push(data[i].name);
+					// console.log(data[i].name);
 			};
-		}).done(function() {
+		 }).done(function() {
 			populateHTML();
-  		});
+  		 });
 
+		// Some code to populate the DOM after the ajax request has processessss
   		function populateHTML(){
+  			// if items has length
   			if (items.length) {
   			  var content = '<li>' + items.join('</li><li>') + '</li>';
   			  var list = $('<ul />').html(content);
