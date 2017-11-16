@@ -19,166 +19,59 @@
 							<div class="slides">
 								
 								<section>
-									<h1>JSON</h1>
-									<img src="../../assets/images/json.jpg" alt="">
+									<h1>jQuery Ajax Methods</h1>
+									<img src="../../assets/images/ajax-methods.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>JSON con't</h1>
-									<img src="../../assets/images/json-keys.jpg" alt="">
+									<h1>jQuery Ajax handlers</h1>
+									<img src="../../assets/images/ajax-handlers.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>JSON with data</h1>
-									<img src="../../assets/images/json-data.jpg" alt="">
+									<h1>Filtering Data with js methods</h1>
+									<img src="../../assets/images/js-sort.jpg" alt="">
 									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>JSON data Structure</h1>
-									<p>As described above, a JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
-									<code>
-										<pre class="language-json">
-											{
-											  "squadName": "Super hero squad",
-											  "homeTown": "Metro City",
-											  "formed": 2016,
-											  "secretBase": "Super tower",
-											  "active": true,
-											  "members": [
-											    {
-											      "name": "Molecule Man",
-											      "age": 29,
-											      "secretIdentity": "Dan Jukes",
-											      "powers": [
-											        "Radiation resistance",
-											        "Turning tiny",
-											        "Radiation blast"
-											      ]
-											    },
-											    {
-											      "name": "Madame Uppercut",
-											      "age": 39,
-											      "secretIdentity": "Jane Wilson",
-											      "powers": [
-											        "Million tonne punch",
-											        "Damage resistance",
-											        "Superhuman reflexes"
-											      ]
-											    },
-											    {
-											      "name": "Eternal Flame",
-											      "age": 1000000,
-											      "secretIdentity": "Unknown",
-											      "powers": [
-											        "Immortality",
-											        "Heat Immunity",
-											        "Inferno",
-											        "Teleportation",
-											        "Interdimensional travel"
-											      ]
-											    }
-											  ]
-											}
-										</pre>
-									</code>
+									<h1>Filtering data with jQuery methods</h1>
+									<img src="../../assets/images/jq-sort.jpg" alt="">
+									<h6><i>Image courtesy of Jon Duckett: "Javascript and jQuery", John Wiley & Sons Inc 2014</i></h6>
 								</section>
 
 								<section>
-									<h1>Accessing JSON Data</h1>
+									<h1>JS sort() method</h1>
+
 									<pre>
 										<code class="language-javascript">
-											var sammy = { 
-											  "first_name"  :  "Sammy", 
-											  "last_name"   :  "Shark", 
-											  "online"      :  true 
-											}
-											// In order to access any of the values, we’ll be // using dot notation that looks like this:
+											var fruits = ["Banana", "Orange", "Apple", "Mango"];
+											fruits.sort();
 
-											sammy.first_name
-											sammy.last_name
-											sammy.online
-
-											// Deeper nested arrays and properties within the object
-
-											var user_profile = { 
-											  "username" : "SammyShark",
-											  "social_media" : [
-											    {
-											      "description" : "twitter",
-											      "link" : "https://twitter.com/digitalocean"
-											    },
-											    {
-											      "description" : "facebook",
-											      "link" : "https://www.facebook.com/DigitalOceanCloudHosting"
-											    },
-											    {
-											      "description" : "github",
-											      "link" : "https://github.com/digitalocean"
-											    }
-											  ]
-											}
-
-											alert(user_profile.social_media[1].description);
+											// Apple,Banana,Mango,Orange
 										</code>
 									</pre>
+
 								</section>
 
 								<section>
-									<h1>JSON Stringify</h1>
-									<p>
-									A common use of JSON is to exchange data to/from a web server.
-									
-									When sending data to a web server, the data has to be a string.
-									
-									Convert a JavaScript object into a string with JSON.stringify().
-								    </p>
-
-								    <pre>
-								    	<code class="language-javascript">
-								    		
-								    		// We’ll look at a JSON object that we assign to the 
-								    		// variable obj, and then we’ll convert it using 
-								    		// JSON.stringify() by passing obj to the function. 
-								    		// We can assign this string to the variable 's' 
-
-								    		var obj = {"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}
-
-								    		var s = JSON.stringify(obj)
-
-								    		// Now, if we work with s, we’ll have the JSON available to 
-								    		// us as a string rather than an object. 
-
-								    		'{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}'
-								    	</code>
-								    </pre>
-
-								    <pre>
-								    	<code class="language-javascript">
-								    		
-								    	</code>
-								    </pre>
-								</section>
-
-								<section>
-									<h1>JSON Parse</h1>
-									<p>Strings are useful for transporting but you’ll want to be able to convert them back to a JSON object on the client and/or the server side. While you can convert text to an object with the eval() function, it is not very secure, so we’ll use the JSON.parse() function instead.</p>
-									
-									<p>Imagine we received this text from a web server</p>
-									<p>Use the JavaScript function JSON.parse() to convert text into a JavaScript object</p>
-									<p>Use the JavaScript object in your page</p>
+									<h1>JS filter() method</h1>
 									
 									<pre>
 										<code class="language-javascript">
-											//Text or json string from the server
-											'{ "name":"John", "age":30, "city":"New York"}'
+											var ages = [32, 33, 16, 40];
 
-											var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+											function checkAdult(age) {
+											    return age >= 18;
+											}
+
+											console.log(ages.filter(checkAdult));
 
 										</code>
 									</pre>
+									
 								</section>
 
 
