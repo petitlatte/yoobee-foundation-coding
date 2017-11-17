@@ -9,4 +9,4 @@ var theArray = [false, 'adam', 'sam', 15, 'bob', 'john', 9000, 'tupac', 'biggie'
 
 
 // *** Extra for the courageous:
-// Have the same function Punctuate the firs letter of each name. 
+// Have the same function Punctuate the first letter of each name. 

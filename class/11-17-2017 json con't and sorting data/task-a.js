@@ -27,7 +27,7 @@ var removedFromMyArray;
 
 
 
-// ***3
+// ***3 indexing and syntax array[0]...etc
 // Retrieve the second tree from the variable 
 // myPlants using object dot and array bracket notation.
 // Setup
