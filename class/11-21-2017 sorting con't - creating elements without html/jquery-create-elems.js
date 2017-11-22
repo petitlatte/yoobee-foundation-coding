@@ -21,5 +21,5 @@ $('<div/>', {
     "name": 'mainDiv',
     "class": 'wrapper',
     "click": function() {
-      jQuery(this).toggleClass("test");
+      $(this).toggleClass("test");
     }}).appendTo('body');
