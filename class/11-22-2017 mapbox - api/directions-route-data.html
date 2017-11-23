@@ -36,9 +36,11 @@
 
     map.addControl(directions, 'top-left');
 
+    console.log(directions);
+
     directions.on('route', function(directions){
         // var datapls = directions.getDestination();
-        console.log('a');
+        console.log(directions);
         alert('Your trip will be: ' + directions.route['0'].distance / 1000 + ' kms');
     });      
 
