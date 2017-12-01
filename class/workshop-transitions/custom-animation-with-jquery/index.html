@@ -10,9 +10,9 @@
 
 	<div id="sideNavigation" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#" id="price">Add Hello Div</a>
-	  <a href="#" id="select">Selection</a>
-	  <a href="#" id="submit">Submition</a>
+	  <a href="#" id="addIt">Add Hello Divs</a>
+	  <a href="#" id="removeIt">Remove Hello Divs</a>
+	  <a href="#" id="submit">Submission and close panel</a>
 	  <div class="content-panel" id="contentPanel">
 
 	  </div>
@@ -35,48 +35,7 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script>
-		var init = function(){
-			var domItems = [];
-			var btn = document.getElementById('icoOpen');
-			btn.onclick = openNav;
-
-			// Dom Queries
-			var price = document.getElementById('price');
-			var select = document.getElementById('select');
-			var submit = document.getElementById('submit');
-			var content = document.getElementById('contentPanel');
-
-			domItems.push(price, select, submit, btn, content);
-
-			// Click events
-			price.addEventListener('click', function(){
-				pricingDomChange(domItems)
-			}, false);
-
-			return domItems;
-		}();
-
-
-		function openNav() {
-		    document.getElementById("sideNavigation").style.width = "50em";
-		}
-		 
-		function closeNav() {
-		    document.getElementById("sideNavigation").style.width = "0";
-		}
-
-		function pricingDomChange(items){
-			var targetDiv = items[4].id;
-			var $elemA = '<h2>Hello</h2>'; 
-		      // $('#details').remove(); // Delete existing details
-		      // $('#contentPanel').fadeOut(500, function(){
-		      // 		$(this).remove();
-		      // 		$( "" ).append( document.createTextNode( "Hello" ) );
-		      // }); // Add new one below
-		      $($elemA).appendTo("#contentPanel" ).hide().fadeIn(800);
-		}
-	</script>
+	<script src="custom.js"></script>
 
 </body>
 </html>

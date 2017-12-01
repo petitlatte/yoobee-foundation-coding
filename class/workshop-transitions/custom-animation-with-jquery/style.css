@@ -2,6 +2,10 @@
 			background-color: yellow;
 			padding: 0.45em;
 		} 
+
+		img {
+			margin-top: 6em;
+		}
 		
 		/* The side navigation menu */
 		.sidenav {
@@ -14,6 +18,9 @@
 		    background-color: #111; /* Black*/
 		    overflow-x: hidden; /* Disable horizontal scroll */
 		    padding-top: 60px; /* Place content 60px from the top */
+
+		    /****The transition below is the animation effect working in conjunction */
+		    /**** with when the .sidenav div is sizing out opennav() in js*/
 		    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
 		    opacity: rgba(0,0,0,0.9);
 		}
