@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Transitions</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="page.css">
+	<!-- https://github.com/rse/jquery-page.git -->
+	<!-- load application -->
+	<style>
+		html, body {
+		    background-color: #999999;
+		}
+		.page {
+			padding: 3em;
+		}
+		.page-a {
+			background-color: #DFFDFF;
+			height: 100vh;
+		}
+		.page-b {
+			background-color: #90BEDE;
+			height: 100vh;
+		}
+		.page-c {
+			background-color: #90F3FF;
+			height: 100vh;
+		}
+		.page-d {
+			background-color: #80A1D4;
+			height: 100vh;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="screen">
+		<div class="wrap">
+			<div class="page page-a" data-jquery-page-name="1">
+				<h1 class="navigate" data-page-name="2" data-page-trans="slide-in-from-right">Page 1</h1>
+
+
+			</div>
+
+			<div class="page page-b" data-jquery-page-name="2">
+				<h1 class="navigate" data-page-name="3" data-page-trans="slide-in-from-top">Page 2</h1>
+
+					
+
+			</div>
+
+			<div class="page page-c" data-jquery-page-name="3">
+			<h1 class="navigate" data-page-name="4" data-page-trans="slide-in-from-bottom">Page 3</h1>
+
+
+			</div> <!-- wrap ends -->
+
+			<div class="page page-d" data-jquery-page-name="4">
+				<h1 class="navigate" data-page-name="1" data-page-trans="slide-in-from-left">Page 4</h1>
+				
+			</div>
+		</div> <!-- div ends -->
+	</div> <!-- screen ends -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="page.js"></script>
+	<script>
+		(function ($) {
+		    $(document).ready(function () {
+		        $(".screen").page();
+		        $(".screen .page .navigate").click(function (ev) {
+		            var page  = $(ev.target).attr("data-page-name");
+		            var trans = $(ev.target).attr("data-page-trans");
+		            if ($(".screen").page().fetch(page) === null)
+		                $(".screen").page().shake();
+		            else
+		                $(".screen").page().transition(page, trans);
+		        });
+		        $(".screen").page().transition("1", "none");
+		        $(".remove-button").click(function () {
+		            var id = $(".remove-input").val();
+		            $(".screen").page().remove(id);
+		        });
+		        $(".shake-button").click(function () {
+		            $(".screen").page().shake();
+		        });
+		    });
+		})(jQuery);
+	</script>
+
+</body>
+</html>
