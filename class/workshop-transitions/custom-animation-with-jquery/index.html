@@ -10,7 +10,7 @@
 
 	<div id="sideNavigation" class="sidenav">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="#" id="price">Pricing</a>
+	  <a href="#" id="price">Add Hello Div</a>
 	  <a href="#" id="select">Selection</a>
 	  <a href="#" id="submit">Submition</a>
 	  <div class="content-panel" id="contentPanel">
@@ -42,7 +42,6 @@
 			btn.onclick = openNav;
 
 			// Dom Queries
-
 			var price = document.getElementById('price');
 			var select = document.getElementById('select');
 			var submit = document.getElementById('submit');
@@ -51,7 +50,9 @@
 			domItems.push(price, select, submit, btn, content);
 
 			// Click events
-			price.onclick = pricingDomChange;
+			price.addEventListener('click', function(){
+				pricingDomChange(domItems)
+			}, false);
 
 			return domItems;
 		}();
@@ -66,7 +67,8 @@
 		}
 
 		function pricingDomChange(items){
-			var $elemA = '<h2>Hellozzzz</h2>'; 
+			var targetDiv = items[4].id;
+			var $elemA = '<h2>Hello</h2>'; 
 		      // $('#details').remove(); // Delete existing details
 		      // $('#contentPanel').fadeOut(500, function(){
 		      // 		$(this).remove();
