@@ -6,7 +6,6 @@ var gulp = require('gulp');
  	jshint = require('gulp-jshint');
     rename = require('gulp-rename');
     minifyCss = require('gulp-minify-css');
-    jade = require('gulp-jade');
 
 //Server Task
 gulp.task('serve', function(event) {
@@ -33,7 +32,7 @@ gulp.task('html', function() {
     	.pipe(connect.reload());
 });
 
-//JS Lint Task
+//JS Lint Task for correcting and monitoring your custom.js
 gulp.task('lint', function(){
     gulp.src('js/*.js')
     .pipe(jshint())
@@ -41,25 +40,12 @@ gulp.task('lint', function(){
 	.pipe(connect.reload());
 });
 
-//Rendering Jade Task 
-gulp.task('templates', function() {
-  var YOUR_LOCALS = {};
-  gulp.src('views/*.jade')
-    .pipe(jade({ 
-        locals: YOUR_LOCALS,
-        pretty: true
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(connect.reload());
-});
 
-//Watch Task
+//Watch task to watch for file changes
 gulp.task('watch', function(){
 	gulp.watch('sass/**/*.scss', ['styles']);
 	gulp.watch('./*.html', ['html']); 
 	gulp.watch('js/*.js', ['lint']);
-    gulp.watch('views/*.jade', ['templates']);
-
 });
 
 
