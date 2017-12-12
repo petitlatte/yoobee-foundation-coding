@@ -18,6 +18,14 @@
           top: 1em;
           right: 3em;
         }
+        .marker {
+          background-image: url('mapbox-icon.png');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
         #aa, #bb {
           display: block;
           height: 2.5em;
@@ -39,14 +47,6 @@
 
 <div id='map'></div>
 
-<div class="directions-div" id="dir">
-<p>CUSTOM INPUTS</p>
-  <form action="">
-    <input type="text" id="aa" placeholder="ORIGIN">
-    <input type="text" id="bb" placeholder="DESTINATION">
-  </form>
-</div>
-
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
@@ -54,54 +54,48 @@
 <script>
 (function(){
 
-    // Setup and main variables 
+    // It's Christmas time to go outside and score a free coffee. 
+
+    // 1. Correct the code errors.
+    // 2. Then answer these for the location -
+        // (A) Boron. 
+        // (B) Bytes in a Bit.
+
+    var location = [174.7787(A)1, -41.2778(B)5];
     
     mapboxgl.accessToken = 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg';
-
-    var directions = new MapboxDirections({
-      accessToken: 'pk.eyJ1IjoidmVyYXRlY2giLCJhIjoiY2phYmZ1NXFmMHIwMDM1cGV4bHV4bHhzbSJ9.gbT5J_uXxbjRRuj00D7Xeg',
-      unit: 'metric'
-    });
 
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
-      center: [-79.4512, 43.6568],
-      zoom: 13
+      center: location,
+      zoom: 19
     });
 
+    map.on('load', function () {
+        console.log('a');
+        // create a DOM element for the marker
+        var el = document.createElement('div');
+        element.cRassName = 'marker';
+        el.style.width = '35px';
+        el.style.height = '35px';
+
+        el.addEventListener('click', function() {
+            window.alert(marker.properties.message);
+        });
+
+        // add marker to map
+        new mapboxgl.Marker(el)
+            .setLngLat(location)
+            .addTo(map);  
+        console.log('b');
+    });
+  
     var myVoice = new p5.Speech(); // new P5.Speech object
-
-
-    // Working code
-    map.addControl(directions, 'top-left');
-
-    console.log(directions);
-
-    //Getting the directions distance
-    directions.on('route', function(directions){
-        // var datapls = directions.getDestination();
-        console.log(directions);
-        console.log(directions.route['0'].distance / 1000);
-        console.log(myVoice.voices);
         // myVoice.setPitch()
         //myVoice.setRate()
-        myVoice.setVoice("Google UK English Female");
-
-        myVoice.speak('Your trip will be: ' + directions.route['0'].distance / 1000 + ' kilometers');
-    });  
-
-    //Getting route from custom inputs
-    document.getElementById('dir').addEventListener('click', setRouteDynamically, false);
-
-    function setRouteDynamically(){
-      var getAA = document.getElementById('aa').value;
-      var getBB = document.getElementById('bb').value;
-      directions.setOrigin(getAA); 
-      directions.setDestination(getBB);        
-    }
- 
-
+        myVoice.setVoice("Chello");
+        myVoice.speak('Congratulations, Jared is located at the marker. Enjoy your free coffee')
 
 })();
 
